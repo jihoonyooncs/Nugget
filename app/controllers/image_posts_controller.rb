@@ -30,6 +30,15 @@ class ImagePostsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@image_post = current_user.image_posts.find(params[:id])
+		@image_post.destroy
+		respond_to do |format|
+			format.html { redirect_to posts_path }
+			format.json { head :no_content }
+		end
+	end
+
 	private
 	
 	def image_post_params

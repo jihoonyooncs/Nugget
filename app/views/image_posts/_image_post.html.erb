@@ -21,3 +21,9 @@
 <% if image_post.user == current_user %>
 	<p><%= link_to 'Edit', edit_image_post_path(image_post), class: "btn btn-default" %></p>
 <% end %>
+
+<%# link to delete %>
+<% if image_post.user == current_user %>
+	<%= link_to 'Destroy', image_post_path(image_post), method: :delete, class: "btn btn-default" %>
+	<p></p>
+<% end %>
