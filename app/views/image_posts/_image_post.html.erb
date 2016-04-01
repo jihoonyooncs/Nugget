@@ -19,7 +19,7 @@
 
 <%# link to edit %>
 <% if image_post.user == current_user %>
-	<p><%= link_to 'Edit', edit_image_post_path(image_post), class: "btn btn-default" %></p>
+	<%= link_to 'Edit', edit_image_post_path(image_post), class: "btn btn-default" %>
 <% end %>
 
 <%# link to delete %>
