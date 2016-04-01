@@ -20,5 +20,11 @@
 
 <%# link to edit %>
 <% if text_post.user == current_user %>
-	<p><%= link_to 'Edit', edit_text_post_path(text_post), class: "btn btn-default" %></p>
+	<%= link_to 'Edit', edit_text_post_path(text_post), class: "btn btn-default" %>
+<% end %>
+
+<%# link to delete %>
+<% if text_post.user == current_user %>
+	<%= link_to 'Destroy', text_post_path(text_post), method: :delete, class: "btn btn-default" %>
+	<p></p>
 <% end %>

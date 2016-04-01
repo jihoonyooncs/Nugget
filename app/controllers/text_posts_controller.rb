@@ -26,6 +26,15 @@ class TextPostsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@text_post = current_user.text_posts.find(params[:id])
+		@text_post.destroy
+		respond_to do |format|
+			format.html { redirect_to posts_path }
+			format.json { head :no_content }
+		end
+	end
+
 	private
 
 	def text_post_params
