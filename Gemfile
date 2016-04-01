@@ -51,3 +51,4 @@ gem 'will_paginate'
 # gems required by Heroku
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production 
+gem 'closure-compiler'
