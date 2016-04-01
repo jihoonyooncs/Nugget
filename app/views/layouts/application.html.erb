@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Nugget</title>
+	<%# image tag %>
+
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
@@ -14,18 +15,48 @@
 	<% if alert %>
 	<div class="alert alert-danger"><%= alert %></div>
 	<% end %>
-
+	<title> nugget </title>
+	<%= favicon_link_tag %>
 	<div class="pull-right">
-		<% if current_user %>
-		<%= link_to 'Profile', current_user %>
-		<%= link_to 'Log Out', logout_path, method: :delete %>
-		<% else %>
-		<%= link_to 'Log In', login_path %> or
-		<%= link_to 'Sign Up', signup_path %>
-		<% end %>
+		<%# if current_user %>
+		<%#= link_to 'Profile', current_user %>
+		<%#= link_to 'Log Out', logout_path, method: :delete %>
+		<%# else %>
+		<%#= link_to 'Log In', login_path %>
+		<%#= link_to 'Sign Up', signup_path %>
+		<%# end %>
 	</div>
 
+	<div id="wrapper">
+	<header>
+	<%= link_to image_tag("goldnugget.png", alt: "Nugget"), {:controller => 'posts', :action => 'index'}, :class => 'websiteLogo' %>
+	<%= link_to 'NUGGET', {:controller => 'posts', :action => 'index'}, {:class => 'websiteTitle'} %>
+	</header>
+
+	<p>
+	<nav id="horzNav">
+	<%= link_to 'All Posts', posts_path %>
+	<% if(current_user) %>
+	<%= link_to 'Subscribed Posts', subindex_path %>
+	<%= link_to 'Friends', posts_path %>
+	<%end%>
+	<%= link_to 'Categories', posts_path %>
+	<% if(current_user) %>
+	<%= link_to 'Profile', current_user %>
+	<%= link_to 'Log Out', logout_path, method: :delete %>
+	<% else %> 
+	<%= link_to 'Log In', login_path %>
+	<%= link_to 'Sign Up', signup_path %>
+	<% end %>
+	</p>
+	</nav>
+
+	<main id="content">
+
+
 	<%= yield %>
+	</main>
+	</div> <!-- END OF WRAPPER -->
 </div>
 </body>
 </html>

@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
 
 	has_secure_password
 	validates :email, presence: true, uniqueness: true
+	validates :screenname, presence: true, uniqueness: true
 
 	has_many :comments
 
@@ -25,6 +26,6 @@ class User < ActiveRecord::Base
 	end
 
 	def timeline_user_ids
-		leader_ids + [id]
+		leader_ids
 	end
 end
