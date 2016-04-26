@@ -1,4 +1,6 @@
 class Post < ActiveRecord::Base
+	acts_as_votable
+  	acts_as_taggable_on :tags
 	belongs_to :user
 	validates :user_id, presence: true
 	validates :type, presence: true

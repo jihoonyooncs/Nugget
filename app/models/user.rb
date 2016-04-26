@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	acts_as_voter
 	has_many :subscriptions, foreign_key: :follower_id, dependent: :destroy
 	has_many :leaders, through: :subscriptions
 
@@ -15,6 +16,21 @@ class User < ActiveRecord::Base
 
 	has_many :comments
 
+	has_many :notifications
+	has_many :friendships
+	has_many :accepted_friendships, 
+			-> {where status: 'accepted'},
+			:class_name => "Friendship"
+	has_many :requested_friendships, 
+			-> {where status: 'requested'},
+			:class_name => "Friendship"
+	has_many :pending_friendships, 
+			-> {where status: 'pending'},
+			:class_name => "Friendship"
+	has_many :friends, :through => :accepted_friendships
+	has_many :requested_friends, :through => :requested_friendships, :source => :friend
+	has_many :pending_friends, :through => :pending_friendships, :source => :friend
+
 	def following?(leader)
 		leaders.include? leader
 	end
@@ -24,7 +40,7 @@ class User < ActiveRecord::Base
 			leaders << leader
 		end
 	end
-
+	
 	def timeline_user_ids
 		leader_ids
 	end

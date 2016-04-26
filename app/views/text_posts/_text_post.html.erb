@@ -1,3 +1,17 @@
+
+<%= link_to like_post_path(text_post), class:"like", method: :put do %>
+	<button type="button" class="btn btn-info" aria-label="Left Align">
+		<span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
+		<span class="badge"><%= text_post.get_upvotes.size %></span>
+	</button>
+<% end %>
+<%= link_to unlike_post_path(text_post), class:"like", method: :put do %>
+	<button type="button" class="btn btn-info" aria-label="Left Align">
+		<span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>
+		<span class="badge"><%= text_post.get_downvotes.size %></span>
+	</button>
+<% end %>
+
 <% cache text_post do %>
 	<div class="panel panel-default">
 		<div class="panel-heading">
@@ -12,11 +26,17 @@
 			<p><em><%= link_to text_post.user.screenname, text_post.user %>:</em></p>
 			<%= sanitize text_post.body %>
 
+			<%# Tags %>
+			<p>
+				Categories: <%= raw text_post.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %>
+			</p>
+
 			<p><%= pluralize text_post.cached_comment_count, "Comment" %></p>
 			
 		</div>
 	</div>
 <% end %>
+
 
 <%# link to edit %>
 <% if text_post.user == current_user %>

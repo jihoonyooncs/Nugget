@@ -3,10 +3,28 @@ Rails.application.routes.draw do
   resources :image_posts
   resources :text_posts
   resources :posts
-  resources :users
   resources :sessions
 
-  root to: "posts#index"
+  resources :posts do
+    member do
+      put "like" => "posts#upvote"
+      put "unlike" => "posts#downvote"
+    end
+  end
+  
+  resources :users do
+    member do
+      get :friends
+    end
+  end
+
+  get 'friends', to: 'friendships#index', as: 'friends'
+  post 'friends/create/:id', to: 'friendships#create', as: 'add_friend'
+  put 'friends/accept.:id', to: 'friendships#accept', as: 'accept_request'
+  delete 'friends/deny/:id', to: 'friendships#deny', as: 'deny_request'
+  delete 'friends/delete/:id', to: 'friendships#destroy', as: 'delete_friend'
+
+  get 'tags/:tag', to: 'posts#index', as: :tag
   
   get 'signup', to: 'users#new', as: 'signup'
   post 'follow/:id', to: 'users#follow', as: 'follow_user'
@@ -15,6 +33,12 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy', as: 'logout'
 
   get 'subindex', to: 'posts#subindex', as: 'subindex'
+
+  
+
+  root to: "posts#index"
+
+  #get 'friendslist', to: 'users#friendslist', as: 'friendslist'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

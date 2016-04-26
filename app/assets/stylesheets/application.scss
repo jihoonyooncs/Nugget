@@ -1,10 +1,11 @@
-@import "bootstrap";
 @import "bootstrap-sprockets";
-
+@import "bootstrap";
+/*
 a:hover{
 	color: #007ebd;
 	background-color: #FFF;
 }
+*/
 
 body{
 	background: #5D8AA8;
@@ -57,4 +58,8 @@ header{
 
 main{
 	 padding: 10px 10px 20px 10px;
+}
+
+.like:hover{
+	text-decoration: none;
 }

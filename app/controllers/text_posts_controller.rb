@@ -1,4 +1,14 @@
 class TextPostsController < ApplicationController
+	def upvote
+		@text_post.upvote_from current_user
+		redirect_to text_post_path
+	end
+
+	def downvote
+		@text_post.downvote_from current_user
+		redirect_to text_post_path
+	end
+
 	def new
 		@text_post = TextPost.new
 	end
@@ -38,6 +48,6 @@ class TextPostsController < ApplicationController
 	private
 
 	def text_post_params
- 		params.require(:text_post).permit(:body)
+ 		params.require(:text_post).permit(:body, :tag_list)
 	end
 end
