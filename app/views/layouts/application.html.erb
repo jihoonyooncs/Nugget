@@ -8,14 +8,8 @@
 	<%= csrf_meta_tags %>
 </head>
 <body>
-	<divclass="container">
-	<% if notice %>
-	<div class="alert alert-success"><%= notice %></div>
-	<% end %>
-	<% if alert %>
-	<div class="alert alert-danger"><%= alert %></div>
-	<% end %>
-	<title> nugget </title>
+	<div class="container">
+	<title> Nugget </title>
 	<%= favicon_link_tag %>
 	<div class="pull-right">
 		<%# if current_user %>
@@ -32,9 +26,9 @@
 	<%= link_to image_tag("goldnugget.png", alt: "Nugget"), {:controller => 'posts', :action => 'index'}, :class => 'websiteLogo' %>
 	<%= link_to 'NUGGET', {:controller => 'posts', :action => 'index'}, {:class => 'websiteTitle'} %>
 	</header>
-
+	
 	<p>
-	<nav id="horzNav">
+	<nav id="horzNav", align = "center">
 	<%= link_to 'All Posts', posts_path %>
 	<% if(current_user) %>
 	<%= link_to 'Subscribed Posts', subindex_path %>
@@ -51,6 +45,15 @@
 	</p>
 	</nav>
 
+
+	<% if notice %>
+	<div class="alert alert-success"><%= notice %></div>
+	<% end %>
+	<% if alert %>
+	<div class="alert alert-danger"><%= alert %></div>
+	<% end %>
+
+	
 	<main id="content">
 
 

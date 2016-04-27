@@ -1,12 +1,24 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-/*
-a:hover{
-	color: #007ebd;
-	background-color: #FFF;
-}
-*/
 
+
+.panel{
+	padding: 10px 10px 10px 10px;
+	
+}
+.panel-primary{
+	background-color: black;
+	color: white; 
+}
+img{
+	align: center;
+	margin: 10px 0px 10px 0px;
+}
+a:hover{
+	color: #5D8AA8;
+	background-color: none;
+	text-decoration: none;
+}
 body{
 	background: #5D8AA8;
 }
@@ -40,20 +52,21 @@ header{
 #horzNav{
 	display: block;
 	padding: 10px 20px 10px 10px;
-	background: black;
 }
 
 #horzNav a {
 	text-decoration: none;
-	padding-left: 5px;
-	padding-right: 10px;
 	font-weight: bold;
+	font-size: 15px;
+	background: #007ebd;
 	color: white;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 5px;
 }
 
 #horzNav a:hover{
-	background-color: black;
-	color: #007ebd;
+	color: white;
 }
 
 main{
@@ -62,4 +75,7 @@ main{
 
 .like:hover{
 	text-decoration: none;
+}
+.lead{
+	margin-top: 20px;
 }
