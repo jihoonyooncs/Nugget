@@ -12,8 +12,31 @@
 	</button>
 <% end %>
 
+
 <% cache image_post do %>	
 	<div class="panel panel-default">
+	<div class="dropdown">
+		<a class="btn dropdown-toggle" data-toggle="dropdown">  <span class="caret">
+		</span></a>
+		<ul id="dropdown-login" class="dropdown-menu">
+			<li><%# link to edit %>
+				<% if image_post.user == current_user %>
+				<%= link_to 'Edit', edit_image_post_path(image_post) %>
+				<% end %>
+			</li>
+			<li><%# link to delete %>
+				<% if image_post.user == current_user %>
+				<%= link_to 'Delete', image_post_path(image_post), method: :delete %>
+				<% end %>
+			</li>
+			<li>
+				<% if image_post.user != current_user %>
+				<%= link_to 'Subscribe', image_post_path(image_post), method: :subscribe %>
+				<% end %>
+			</li>
+		</ul>
+	</div>
+	
 		<div class="panel-heading">
 			<h3 class="panel-title">
 				<%= image_post.title %>
@@ -28,16 +51,8 @@
 			<p><%= pluralize image_post.cached_comment_count, "Comment" %></p>
 			
 		</div>
-	</div>
+	
 <% end %>
 
-<%# link to edit %>
-<% if image_post.user == current_user %>
-	<%= link_to 'Edit', edit_image_post_path(image_post), class: "btn btn-default" %>
-<% end %>
 
-<%# link to delete %>
-<% if image_post.user == current_user %>
-	<%= link_to 'Destroy', image_post_path(image_post), method: :delete, class: "btn btn-default" %>
-	<p></p>
-<% end %>
+</div>
