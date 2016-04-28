@@ -13,13 +13,39 @@
 <% end %>
 
 <% cache text_post do %>
-	<div class="panel panel-default">
+
+<div class="panel panel-default">
+
+<div class="dropdown">
+	<a class="btn dropdown-toggle" data-toggle="dropdown">  <span class="caret">
+	</span></a>
+		<ul id="dropdown-login" class="dropdown-menu">
+		<li>
+		<%# link to edit %>
+			<% if text_post.user == current_user %>
+			<%= link_to 'Edit', edit_text_post_path(text_post) %>
+			<% end %>
+
+			<%# link to delete %>
+			<% if text_post.user == current_user %>
+			<%= link_to 'Delete', text_post_path(text_post), method: :delete %><% end %>
+		</li>
+		
+		<li>
+				<% if text_post.user != current_user %>
+				<%= link_to 'Subscribe', text_post_path(text_post), method: :subscribe %>
+				<% end %>
+			</li>
+		</ul>
+</div>
+		
 		<div class="panel-heading">
 			<h3 class="panel-title">
 				<%= text_post.title %>
 			</h3>
 			<%= link_to("#{time_ago_in_words text_post.created_at} ago", post_path(text_post)) %>
 		</div>
+		
 		<div class="panel-body">
 
 			<%# links to the user's profile %>
@@ -34,17 +60,8 @@
 			<p><%= pluralize text_post.cached_comment_count, "Comment" %></p>
 			
 		</div>
+
+<% end %>
+
+
 	</div>
-<% end %>
-
-
-<%# link to edit %>
-<% if text_post.user == current_user %>
-	<%= link_to 'Edit', edit_text_post_path(text_post), class: "btn btn-default" %>
-<% end %>
-
-<%# link to delete %>
-<% if text_post.user == current_user %>
-	<%= link_to 'Destroy', text_post_path(text_post), method: :delete, class: "btn btn-default" %>
-	<p></p>
-<% end %>
