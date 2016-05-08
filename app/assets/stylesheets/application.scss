@@ -1,6 +1,31 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+.header{
+	margin: auto;
+	background: white;
+	width: 800px;
+	height: 200px;
+}
+.container{
+	width: 800px;
+	height: 100%;
 
+}
+.btn-info{
+	margin-top: 10px;
+	margin-right: 10px;
+}
+.postcomment{
+	margin: 10px 10px 10px 0px;
+}
+.postcategory{
+	padding-top: 15px;
+	font-size: 10px;
+}
+.postusername{
+	margin: 10px 10px 10px 10px;
+	font-size: 20px;
+}
 .dropdown{
 	float: right;
 }
@@ -8,13 +33,23 @@
 	padding: 10px 10px 10px 10px;
 	
 }
+.panel-body{
+	background-color: #D3D3D3;
+
+}
+.pagination{
+	background-color: white;
+	padding: 5px;
+}
 .panel-primary{
-	background-color: black;
+	background-color: grey;
 	color: white; 
 }
 img{
 	align: center;
 	margin: 10px 0px 10px 0px;
+	max-height: 100%;
+  max-width: 100%;
 }
 a:hover{
 	color: #5D8AA8;
@@ -25,22 +60,12 @@ body{
 	background: #5D8AA8;
 }
 
-div#wrapper{
-	margin: auto;
-	background: white;
-	width: 800px;
-	height: 200px;
-}
-
 header{
 	display: block;
 	padding: 10px 10px 30px 10px;
 }
 
-.websiteLogo{
-	float: left;
-	text-decoration: none;
-}
+
 
 .websiteTitle{
 	font-size: 50px;
@@ -54,6 +79,7 @@ header{
 #horzNav{
 	display: block;
 	padding: 10px 20px 10px 10px;
+	margin-bottom: 10px
 }
 
 #horzNav a {
@@ -80,4 +106,10 @@ main{
 }
 .lead{
 	margin-top: 20px;
+}
+h2{
+	margin-top:20px;
+}
+.table-striped{
+	font-size: 20px;
 }
