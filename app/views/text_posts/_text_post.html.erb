@@ -1,16 +1,5 @@
 
-<%= link_to like_post_path(text_post), class:"like", method: :put do %>
-	<button type="button" class="btn btn-info" aria-label="Left Align">
-		<span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
-		<span class="badge"><%= text_post.get_upvotes.size %></span>
-	</button>
-<% end %>
-<%= link_to unlike_post_path(text_post), class:"like", method: :put do %>
-	<button type="button" class="btn btn-info" aria-label="Left Align">
-		<span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>
-		<span class="badge"><%= text_post.get_downvotes.size %></span>
-	</button>
-<% end %>
+
 
 <% cache text_post do %>
 
@@ -49,19 +38,30 @@
 		<div class="panel-body">
 
 			<%# links to the user's profile %>
-			<p><em><%= link_to text_post.user.screenname, text_post.user %>:</em></p>
-			<%= sanitize text_post.body %>
+			<p class = "postusername"><em><%= link_to text_post.user.screenname, text_post.user %>:</em></p>
+			<div class="panel-body" style="background-color: white;"> <%= sanitize text_post.body %> </div>
 
 			<%# Tags %>
-			<p>
+			<p class = "postcategory">
 				Categories: <%= raw text_post.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %>
 			</p>
 
-			<p><%= pluralize text_post.cached_comment_count, "Comment" %></p>
+			<p class="postcomment"><%= pluralize text_post.cached_comment_count, "Comment" %></p>
 			
 		</div>
 
 <% end %>
 
-
+<%= link_to like_post_path(text_post), class:"like", method: :put do %>
+	<button type="button" class="btn btn-info" aria-label="Left Align">
+		<span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
+		<span class="badge"><%= text_post.get_upvotes.size %></span>
+	</button>
+<% end %>
+<%= link_to unlike_post_path(text_post), class:"like", method: :put do %>
+	<button type="button" class="btn btn-info" aria-label="Left Align">
+		<span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>
+		<span class="badge"><%= text_post.get_downvotes.size %></span>
+	</button>
+<% end %>
 	</div>

@@ -8,10 +8,17 @@
 	<%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="container">
+	<div class="header">
 	<title> Nugget </title>
 	<%= favicon_link_tag %>
-	<div class="pull-right">
+	
+	
+	<header>
+	<%= link_to image_tag("nuggetbanner.png", alt: "Nugget"), {:controller => 'posts', :action => 'index'}, :class => 'websiteLogo' %>
+	</header>
+	</div>
+	<div class="container">
+	 <nav id="horzNav", align = "center">
 		<%# if current_user %>
 		<%#= link_to 'Profile', current_user %>
 		<%#= link_to 'Log Out', logout_path, method: :delete %>
@@ -19,15 +26,8 @@
 		<%#= link_to 'Log In', login_path %>
 		<%#= link_to 'Sign Up', signup_path %>
 		<%# end %>
-	</div>
-
-	<div id="wrapper">
-	<header>
-	<%= link_to image_tag("goldnugget.png", alt: "Nugget"), {:controller => 'posts', :action => 'index'}, :class => 'websiteLogo' %>
-	<%= link_to 'NUGGET', {:controller => 'posts', :action => 'index'}, {:class => 'websiteTitle'} %>
-	</header>
+	</nav>
 	
-	<p>
 	<nav id="horzNav", align = "center">
 	<%= link_to 'All Posts', posts_path %>
 	<% if(current_user) %>
@@ -42,7 +42,7 @@
 	<%= link_to 'Log In', login_path %>
 	<%= link_to 'Sign Up', signup_path %>
 	<% end %>
-	</p>
+
 	</nav>
 
 
@@ -60,7 +60,7 @@
 	<%= yield %>
 	
 	</main>
-	</div> <!-- END OF WRAPPER -->
-</div>
+</div>	
+
 </body>
 </html>

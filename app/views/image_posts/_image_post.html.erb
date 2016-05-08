@@ -1,16 +1,5 @@
 
-<%= link_to like_post_path(image_post), class:"like", method: :put do %>
-	<button type="button" class="btn btn-info" aria-label="Left Align">
-		<span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
-		<span class="badge"><%= image_post.get_upvotes.size %></span>
-	</button>
-<% end %>
-<%= link_to unlike_post_path(image_post), class:"like", method: :put do %>
-	<button type="button" class="btn btn-info" aria-label="Left Align">
-		<span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>
-		<span class="badge"><%= image_post.get_downvotes.size %></span>
-	</button>
-<% end %>
+
 
 
 <% cache image_post do %>	
@@ -44,15 +33,26 @@
 			</h3>
 		</div>
 		<div class="panel-body">
-			<p><em><%= link_to image_post.user.screenname, image_post.user %>:</em></p>
+			<p class="postusername"><em><%= link_to image_post.user.screenname, image_post.user %>:</em></p>
 			<%= image_tag image_post.url, class: "img-responsive" %>
-			<%= image_post.body %>
-
-			<p><%= pluralize image_post.cached_comment_count, "Comment" %></p>
+			 <div class = "panel-body" style="background-color: white;"><%= image_post.body %>
+			 </div>
+			<p class="postcomment"><%= pluralize image_post.cached_comment_count, "Comment" %></p>
 			
 		</div>
 	
 <% end %>
 
-
+<%= link_to like_post_path(image_post), class:"like", method: :put do %>
+	<button type="button" class="btn btn-info" aria-label="Left Align">
+		<span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
+		<span class="badge"><%= image_post.get_upvotes.size %></span>
+	</button>
+<% end %>
+<%= link_to unlike_post_path(image_post), class:"like", method: :put do %>
+	<button type="button" class="btn btn-info" aria-label="Left Align">
+		<span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>
+		<span class="badge"><%= image_post.get_downvotes.size %></span>
+	</button>
+<% end %>
 </div>

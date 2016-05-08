@@ -1,14 +1,12 @@
+
 <%#= render 'friends/lookup' %>
 <% if @friends.count > 0  || @requested_friends.count > 0 %>
+<h2 align="center" class="panel panel-primary">My Friends</h2>
 	<table class="table table-striped">
 		<thread>
 			<tr>
-				<th colspan="3" class="page-header"> 
-					<h2>My Friends</h2>
-				</th>
-			</tr>
-			<tr>
 				<th>Name</th>
+				<th> Request </th>
 			</tr>
 		</thread>
 		<tbody>
@@ -23,7 +21,8 @@
 			<% end %>
 
 			<% @requested_friends.each do |requested_friend| %>
-			<tr>	
+			<tr>
+			
 				<td><%= requested_friend.screenname %></td>
 				<td>
 					<%= link_to "View Profile", user_path(requested_friend), class:"btn btn-primary btn-xs" %>
@@ -40,3 +39,4 @@
 		<p class="lead", align = "center"> You don't have any friends yet. Go out and make some. </p>
 
 <% end %>
+</div>
