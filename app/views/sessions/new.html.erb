@@ -1,6 +1,7 @@
-<div class="page-header">
+<div class="panel panel-default">
+
 	<h1 class="panel panel-primary", align="center">Log In</h1>
-</div>
+
 <%= form_tag sessions_path do %>
 <div class="form-group">
 	<%= label_tag :email %>
@@ -15,3 +16,4 @@
 </div>
 <%= submit_tag "Log In", class: "btn btn-primary" %>
 <% end %>
+</div>
