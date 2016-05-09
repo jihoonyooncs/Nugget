@@ -1,0 +1,58 @@
+
+
+
+
+<% cache image_post do %>	
+	<div class="panel panel-default">
+	<div class="dropdown">
+		<a class="btn dropdown-toggle" data-toggle="dropdown">  <span class="caret">
+		</span></a>
+		<ul id="dropdown-login" class="dropdown-menu">
+			<li><%# link to edit %>
+				<% if image_post.user == current_user %>
+				<%= link_to 'Edit', edit_image_post_path(image_post) %>
+				<% end %>
+			</li>
+			<li><%# link to delete %>
+				<% if image_post.user == current_user %>
+				<%= link_to 'Delete', image_post_path(image_post), method: :delete %>
+				<% end %>
+			</li>
+			<li>
+				<% if image_post.user != current_user %>
+				<%= link_to 'Subscribe', image_post_path(image_post), method: :subscribe %>
+				<% end %>
+			</li>
+		</ul>
+	</div>
+	
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				<%= image_post.title %>
+				<%= link_to "#{time_ago_in_words image_post.created_at} ago", post_path(image_post) %>
+			</h3>
+		</div>
+		<div class="panel-body">
+			<p class="postusername"><em><%= link_to image_post.user.screenname, image_post.user %>:</em></p>
+			<%= image_tag image_post.url, class: "img-responsive" %>
+			 <div class = "panel-body" style="background-color: white;"><%= image_post.body %>
+			 </div>
+			<p class="postcomment"><%= pluralize image_post.cached_comment_count, "Comment" %></p>
+			
+		</div>
+	
+<% end %>
+
+<%= link_to like_post_path(image_post), class:"like", method: :put do %>
+	<button type="button" class="btn btn-info" aria-label="Left Align">
+		<span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
+		<span class="badge"><%= image_post.get_upvotes.size %></span>
+	</button>
+<% end %>
+<%= link_to unlike_post_path(image_post), class:"like", method: :put do %>
+	<button type="button" class="btn btn-info" aria-label="Left Align">
+		<span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>
+		<span class="badge"><%= image_post.get_downvotes.size %></span>
+	</button>
+<% end %>
+</div>

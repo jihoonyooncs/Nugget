@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+
+	<h1 align="center" class="panel panel-primary">User: <b><%= @user.screenname %></b></h1>
+
+
+
+<% if current_user && current_user != @user && !current_user.following?(@user) %>
+	<%= link_to "Follow", follow_user_path(@user), method: :post, class: "btn btn-default" %>
+<% end %>
+<% if current_user && current_user != @user && !current_user.friends.exists?(@user) %>
+	<%= link_to "Send Friend Request", add_friend_path(@user), method: :post, class: "btn btn-default" %>
+<% end %>
+
+<h3 align="center">My Posts</h3>
+
+<%= render @posts %>
+</div>

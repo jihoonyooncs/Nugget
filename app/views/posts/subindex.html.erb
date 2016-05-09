@@ -1,0 +1,11 @@
+<div class="panel panel-default" align="center">
+	
+		<% if(current_user) %>
+			<%= link_to "New Text Post", new_text_post_path, class: "btn btn-primary" %>
+			<%= link_to "New Image Post", new_image_post_path, class: "btn btn-primary" %>
+		<% end %>
+	
+</div>
+<%= render @post %>
+
+<%= will_paginate @post %>

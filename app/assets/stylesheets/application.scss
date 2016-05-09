@@ -1,0 +1,137 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+.header{
+	margin: auto;
+	
+	width: 800px;
+	height: 200px;
+}
+.container{
+	width: 800px;
+	height: 100%;
+
+}
+.btn-info{
+	margin-top: 10px;
+	margin-right: 10px;
+}
+.postcomment{
+	margin: 10px 10px 10px 0px;
+}
+.postcategory{
+	padding-top: 15px;
+	font-size: 10px;
+}
+.postusername{
+	margin: 10px 10px 10px 10px;
+	font-size: 20px;
+}
+.dropdown{
+	float: right;
+}
+.panel{
+	padding: 10px 10px 10px 10px;
+	
+}
+.panel-body{
+	background-color: #D3D3D3;
+
+}
+.pagination{
+	background-color: white;
+	padding: 5px;
+}
+.panel-primary{
+	background-color: grey;
+	color: white;
+	border: 1px solid grey;
+}
+img{
+	align: center;
+	margin: 10px 0px 10px 0px;
+	max-height: 100%;
+  max-width: 100%;
+}
+a:hover{
+	color: #5D8AA8;
+	background-color: none;
+	text-decoration: none;
+}
+body{
+	background-image: url("nuggetbg.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: left bottom;
+	background-color: #155398;
+	background-size: 450px 350px;
+	
+}
+
+header{
+	display: block;
+	padding: 10px 10px 30px 10px;
+	
+}
+
+
+
+.websiteTitle{
+	font-size: 50px;
+	font-decoration: none;
+	font-weight: bold;
+	display: inline;
+	line-height: 80px;
+	padding-left: 20px;
+}
+
+#horzNav{
+	display: block;
+	padding: 20px;
+	background-color: white;
+	
+	
+}
+
+#horzNav a {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 15px;
+	background: #007ebd;
+	color: white;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 5px;
+}
+
+#horzNav a:hover{
+	color: white;
+}
+
+main{
+	 padding: 10px 10px 20px 10px;
+}
+
+.like:hover{
+	text-decoration: none;
+}
+.lead{
+	margin-top: 20px;
+}
+h2{
+	margin-top:20px;
+}
+.table-striped{
+	font-size: 20px;
+}
+.alert-success{
+	margin-top: 10px;
+}
+.alert-danger{
+	margin-top: 10px;
+}
+.panel-default{
+	margin-top: 20px;
+}
+table{
+	border: 1px solid grey;
+}

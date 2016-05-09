@@ -1,0 +1,14 @@
+<%= form_for @text_post do |f| %> 
+
+<div class="form-group">
+	<%= f.label :body %>
+	<%= f.text_area :body, class: "form-control" %>
+</div>
+
+<%= f.label :tag_list, "Tags (separated by commas)"  %>
+<%= f.text_field :tag_list %>
+
+<%= f.submit class: "btn btn-primary" %> 
+<%= link_to 'Cancel', :back, class: "btn btn-default" %>
+
+<% end %>

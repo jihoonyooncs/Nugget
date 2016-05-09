@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<%# image tag %>
+
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="header">
+	<title> Nugget </title>
+	<%= favicon_link_tag %>
+	
+	<header>
+	<%= link_to image_tag("nuggetbanner.png", alt: "Nugget"), {:controller => 'posts', :action => 'index'}, :class => 'websiteLogo' %>
+	</header>
+	</div>
+	<div class="container">
+	 <nav id="horzNav", align = "center">
+		<%# if current_user %>
+		<%#= link_to 'Profile', current_user %>
+		<%#= link_to 'Log Out', logout_path, method: :delete %>
+		<%# else %>
+		<%#= link_to 'Log In', login_path %>
+		<%#= link_to 'Sign Up', signup_path %>
+		<%# end %>
+	
+	<% if(current_user) %>
+	<%= link_to 'Subscribed', subindex_path %>
+	<%= link_to "Friends'", frindex_path %>
+	<%end%>
+
+	<%= link_to 'Top', topindex_path %>
+	<%= link_to 'New', posts_path %>
+
+	<% if(current_user) %>
+	<%= link_to 'Profile', @user %>
+	<%= link_to 'Friends List', friends_path %>
+	<%= link_to 'Log Out', logout_path, method: :delete %>
+	<% else %> 
+	<%= link_to 'Log In', login_path %>
+	<%= link_to 'Sign Up', signup_path %>
+	<% end %>
+
+	</nav>
+	<% if notice %>
+	<div class="alert alert-success"><%= notice %></div>
+	<% end %>
+	<% if alert %>
+	<div class="alert alert-danger"><%= alert %></div>
+	<% end %>
+	
+
+
+	<%= yield %>
+
+</div>	
+
+</body>
+</html>
