@@ -1,6 +1,7 @@
-<div class="page-header">
+<div class="panel panel-default">
+
 	<h1 class="panel panel-primary", align="center">Sign Up</h1>
-</div>
+
 
 <%= form_for(@user) do |f| %>
 <% if @user.errors.any? %>
@@ -36,3 +37,4 @@
 
 <%= f.submit class: "btn btn-primary" %>
 <% end %>
+</div>

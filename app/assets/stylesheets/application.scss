@@ -2,7 +2,7 @@
 @import "bootstrap";
 .header{
 	margin: auto;
-	background: white;
+	
 	width: 800px;
 	height: 200px;
 }
@@ -43,7 +43,8 @@
 }
 .panel-primary{
 	background-color: grey;
-	color: white; 
+	color: white;
+	border: 1px solid grey;
 }
 img{
 	align: center;
@@ -57,12 +58,19 @@ a:hover{
 	text-decoration: none;
 }
 body{
-	background: #5D8AA8;
+	background-image: url("nuggetbg.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: left bottom;
+	background-color: #155398;
+	background-size: 450px 350px;
+	
 }
 
 header{
 	display: block;
 	padding: 10px 10px 30px 10px;
+	
 }
 
 
@@ -78,8 +86,10 @@ header{
 
 #horzNav{
 	display: block;
-	padding: 10px 20px 10px 10px;
-	margin-bottom: 10px
+	padding: 20px;
+	background-color: white;
+	
+	
 }
 
 #horzNav a {
@@ -112,4 +122,16 @@ h2{
 }
 .table-striped{
 	font-size: 20px;
+}
+.alert-success{
+	margin-top: 10px;
+}
+.alert-danger{
+	margin-top: 10px;
+}
+.panel-default{
+	margin-top: 20px;
+}
+table{
+	border: 1px solid grey;
 }

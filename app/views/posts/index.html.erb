@@ -1,11 +1,10 @@
-<div class="page-header", align ="center">
-	<p>
+<div class="panel panel-default", align ="center">
+
 		<% if(current_user) %>
-			<%= link_to "New Text Post", new_text_post_path, class: "btn btn-default"%>
-			<%= link_to "New Image Post", new_image_post_path, class: "btn btn-default"%>
+			<%= link_to "New Text Post", new_text_post_path, class: "btn btn-primary"%>
+			<%= link_to "New Image Post", new_image_post_path, class: "btn btn-primary"%>
 		<% end %>
-	</p>
-	<p>
+	
 </div>
 <%= render @posts %>
 
