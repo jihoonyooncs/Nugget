@@ -70,7 +70,21 @@ Here in the routes file, we must define all the routes that we use for our frien
 
 <img src="friend6.png" width="750">
 
- This line goes in the show.html.erb file for the user, because we want a link in the user’s profile that allows another use to add them as a friend. It only shows up if they are not already a friend and obviously does not show up on your own profile. 
+This line goes in the show.html.erb file for the user, because we want a link in the user’s profile that allows another use to add them as a friend. It only shows up if they are not already a friend and obviously does not show up on your own profile. 
+ 
+
+###Additional Diagrams
+ER Diagram:
+
+<img src="signup.png" width="700">
+
+Relational Schema Diagram:
+
+<img src="signup.png" width="600">
+
+![database.png]({{site.baseurl}}/database.png)
+![er.png]({{site.baseurl}}/er.png)
+
 
 
 
