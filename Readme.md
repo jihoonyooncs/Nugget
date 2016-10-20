@@ -76,14 +76,11 @@ This line goes in the show.html.erb file for the user, because we want a link in
 ###Additional Diagrams
 ER Diagram:
 
-<img src="signup.png" width="700">
+<img src="er.png" width="700">
 
 Relational Schema Diagram:
 
-<img src="signup.png" width="600">
-
-![database.png]({{site.baseurl}}/database.png)
-![er.png]({{site.baseurl}}/er.png)
+<img src="database.png" width="600">
 
 
 
