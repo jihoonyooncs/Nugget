@@ -12,13 +12,13 @@ This project was made in the span of about a month with a team of four people. O
 ###Screenshots and explanations of the functions
 Sign-up/Log-in - normal process of signing up with a unique username and e-mail account and logging in to have your own session where you can make your own posts.
 
-<img src="signup.png" width="400">
-<img src="login.png" width="400">
+<img src="signup.png" width="550">
+<img src="login.png" width="550">
 
 Add Friends or Follow - You can add friends and it will send them a request which they can accept or deny. You can also follow their posts without sending a friend request.
 
-<img src="friend-follow.png" width="400">
-<img src="acceptdeny.png" width="400">
+<img src="friend-follow.png" width="550">
+<img src="acceptdeny.png" width="550">
 
 The front page initially consists of posts by users you are friends with or are following sorted by the most recent on top. You can also show only subscribed or only friends' posts, and sort by top (most voted) or new posts. The voting system, which was implemented with a gem, is a simple click to vote up or down system. The database logs how many upvotes or downvotes a post has and sorts them accordingly.
 
