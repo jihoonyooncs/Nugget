@@ -22,7 +22,7 @@ Add Friends or Follow - You can add friends and it will send them a request whic
 
 The front page initially consists of posts by users you are friends with or are following sorted by the most recent on top. You can also show only subscribed or only friends' posts, and sort by top (most voted) or new posts. The voting system, which was implemented with a gem, is a simple click to vote up or down system. The database logs how many upvotes or downvotes a post has and sorts them accordingly.
 
-<img src="sort.png" width="600">
+<img src="sort.png" width="440">
 
 You can either add a text post or an image post. Along with this, you can add tags. These tags can be used on the front page to show posts only from that tag. 
 
