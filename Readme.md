@@ -13,6 +13,12 @@ This project was made in the span of about a month with a team of four people. O
 Sign-up/Log-in - normal process of signing up with a unique username and e-mail account and logging in to have your own session where you can make your own posts.
 
 ![login.png]({{site.baseurl}}/login.png)
+![imagepost.png]({{site.baseurl}}/imagepost.png)
+![textpost.png]({{site.baseurl}}/textpost.png)
+![acceptdeny.png]({{site.baseurl}}/acceptdeny.png)
+![friend-follow.png]({{site.baseurl}}/friend-follow.png)
+![sort.png]({{site.baseurl}}/sort.png)
+
 
 
 <img src="signup.png" width="400">
