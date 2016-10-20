@@ -12,7 +12,7 @@ This project was made in the span of about a month with a team of four people. O
 ###Screenshots of the functions
 Sign-up/Log-in!
 ![](//signup.png)
-<img src="signup.png" width="500">
+<img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Common-dog-behaviors-explained.jpg?itok=FSzwbBoi" width="500">
 
 ###Code Examples and Explanations
 Functionalities we added were logging in and out, 
