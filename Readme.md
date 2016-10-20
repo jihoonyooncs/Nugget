@@ -11,5 +11,6 @@ This project was made in the span of about a month with a team of four people. O
 
 
 <img src="http://5304-presscdn-26-17.pagely.netdna-cdn.com/guides/wp-content/uploads/2011/10/Screen-Shot-2014-03-31-at-4.19.56-PM.png" width="500">
+note: sample picture. WIP
 
 ###Code Examples and Explanations
