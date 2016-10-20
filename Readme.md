@@ -13,7 +13,6 @@ This project was made in the span of about a month with a team of four people. O
 Sign-up/Log-in!
 ![](//signup.png)
 <img src="//signup.png" width="500">
-note: sample picture. WIP
 
 ###Code Examples and Explanations
 Functionalities we added were logging in and out, 
