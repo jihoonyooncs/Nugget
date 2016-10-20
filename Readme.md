@@ -81,8 +81,3 @@ ER Diagram:
 Relational Schema Diagram:
 
 <img src="database.png" width="600">
-
-
-
-
-
