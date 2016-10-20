@@ -12,6 +12,8 @@ This project was made in the span of about a month with a team of four people. O
 ###Screenshots and explanations of the functions
 Sign-up/Log-in - normal process of signing up with a unique username and e-mail account and logging in to have your own session where you can make your own posts.
 
+
+![](login.png)
 <img src="signup.png" width="400">
 <img src="login.png" width="400">
 
