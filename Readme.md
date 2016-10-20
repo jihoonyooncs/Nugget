@@ -12,8 +12,8 @@ This project was made in the span of about a month with a team of four people. O
 ###Screenshots and explanations of the functions
 Sign-up/Log-in - normal process of signing up with a unique username and e-mail account and logging in to have your own session where you can make your own posts.
 
-<img src="signup.png" width="430">
-<img src="login.png" width="430">
+<img src="signup.png" width="440">
+<img src="login.png" width="440">
 
 Add Friends or Follow - You can add friends and it will send them a request which they can accept or deny. You can also follow their posts without sending a friend request.
 
