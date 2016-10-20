@@ -11,7 +11,9 @@ This project was made in the span of about a month with a team of four people. O
 
 ###Screenshots of the functions
 Sign-up/Log-in!
-<img src="signup.png" width="400"><img src="login.png" width="400">
+
+<img src="signup.png" width="400">
+<img src="login.png" width="400">
 
 ###Code Examples and Explanations
 Functionalities we added were logging in and out, 
