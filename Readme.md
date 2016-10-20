@@ -14,7 +14,9 @@ Sign-up/Log-in - normal process of signing up with a unique username and e-mail 
 
 ![login.png]({{site.baseurl}}/login.png)
 ![imagepost.png]({{site.baseurl}}/imagepost.png)
-![textpost.png]({{site.baseurl}}/textpost.png)
+![textpost.png]({{site.baseurl}}/textpost.png)![myprofile.png]({{site.baseurl}}/myprofile.png)
+![notifications.png]({{site.baseurl}}/notifications.png)
+
 ![acceptdeny.png]({{site.baseurl}}/acceptdeny.png)
 ![friend-follow.png]({{site.baseurl}}/friend-follow.png)
 ![sort.png]({{site.baseurl}}/sort.png)
